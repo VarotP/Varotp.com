@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://varotp-dev.vercel.app
+
+# Sitemaps
+Sitemap: https://varotp-dev.vercel.app/sitemap.xml

@@ -20,9 +20,33 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Varotp.dev",
-  description: "Varot Pavaritpong's personal website",
+  title: 'Varot Pavaritpong | Portfolio',
+  description: 'Full-stack developer passionate about clean code and creativity.',
+  keywords: ['Varot Pavaritpong', 'Full Stack Developer', 'Portfolio', 'UBC', 'Web Developer', 'React', 'TypeScript'],
+  openGraph: {
+    title: 'Varot Pavaritpong | Portfolio',
+    description: 'Full-stack developer passionate about clean code and creativity.',
+    siteName: 'Varot Pavaritpong Portfolio',
+    url: 'https://varotp-dev.vercel.app/',
+    images: [
+      {
+        url: 'https://varotp-dev.vercel.app/meta.png',
+        width: 1536,
+        height: 1024,
+        alt: 'Portfolio Open Graph Image',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Varot Pavaritpong | Portfolio',
+    description: 'Full-stack developer passionate about clean code and creativity.',
+    images: ['https://varotp-dev.vercel.app/meta.png'],
+    creator: '@NeonRedPanda',
+  },
 };
+
 
 export default function RootLayout({
   children,
