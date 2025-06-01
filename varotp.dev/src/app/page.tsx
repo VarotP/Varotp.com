@@ -19,17 +19,17 @@ export default function Home() {
               Blog
             </a>
             <a href="https://github.com/VarotP" target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
                 className="inline-block h-10 w-10 mb-2"
                 alt="GitHub"
               />
             </a>
             <a href="https://www.linkedin.com/in/varot-pavaritpong/" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" className="inline-block h-10 w-10 mb-2" alt="linkedIn"/>
+            <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" className="inline-block h-10 w-10 mb-2" alt="linkedIn"/>
             </a>
             <a href="https://www.instagram.com/val12.ig/" target="_blank" rel="noopener noreferrer">
-              <img src="/Instagram.svg" className="inline-block h-10 w-10 mb-2" alt="Instagram"/>   
+              <Image src="/Instagram.svg" className="inline-block h-10 w-10 mb-2" alt="Instagram"/>   
             </a>
           </div>
         </nav>
@@ -38,7 +38,7 @@ export default function Home() {
             <p className="text-[64px] text-black font-poppins">Varot Pavaritpong</p>
             <p className="text-[64px] text-black">4th year BA CS @ UBC</p>
           </div>
-          <img src="myPhoto.png" alt="My Photo" className="w-64 h-64 mx-auto mt-4"/>
+          <Image src="myPhoto.png" alt="My Photo" className="w-64 h-64 mx-auto mt-4"/>
         </div>
         <div className="flex flex-col items-center mb-75">
           <div className="text-[48px] text-black font-poppins text-center mb-5">
@@ -56,7 +56,7 @@ export default function Home() {
           <div>
             <div className="bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
               <a href="projects" className="flex flex-col items-center">
-                <img src="/airbnb.png" className=""/>
+                <Image src="/airbnb.png" alt="airbnb-project-image"/>
               </a>
             </div>
             <div className="text-[20px] text-black font-poppins text-center">
@@ -66,7 +66,7 @@ export default function Home() {
           <div>
             <div className="bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
               <a href="https://github.com/VarotP/CatClicker" className="flex flex-col items-center">
-                  <img src="/catclicker.png" className=""/>
+                  <Image src="/catclicker.png" alt="catclicker-image"/>
               </a>
             </div>
             <div className="text-[20px] text-black font-poppins text-center">
@@ -76,7 +76,7 @@ export default function Home() {
           <div>
             <div className="bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
               <a href="https://github.com/VarotP/DailyPlan-Forecast" className="flex flex-col items-center">
-                  <img src="/forecast.png" className=""/>
+                  <Image src="/forecast.png" alt="dailyplan-forecast-image"/>
               </a>
             </div>
             <div className="text-[20px] text-black font-poppins text-center">
@@ -95,10 +95,10 @@ export default function Home() {
               Languages
             </div>
             <div className="grid grid-cols-2 gap-2">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scala/scala-original.svg" className="h-20 w-20"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" className="h-20 w-20" alt="javascript"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" className="h-20 w-20" alt="typescript"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" className="h-20 w-20" alt="python"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scala/scala-original.svg" className="h-20 w-20" alt="scala"/>
             </div>
           </div>
           <div>
@@ -106,10 +106,10 @@ export default function Home() {
               Back-end
             </div>
             <div className="grid grid-cols-2 gap-2">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" className="h-20 w-20"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" className="h-20 w-20" alt="spring"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" className="h-20 w-20" alt="node"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" className="h-20 w-20" alt="mysql"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" className="h-20 w-20" alt="java"/>
             </div>
           </div>
           <div>
@@ -117,10 +117,10 @@ export default function Home() {
               Front-end
             </div>
             <div className="grid grid-cols-2 gap-2">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" className="h-20 w-20"/>
-              <img src="/react-native-1.svg" className="h-20 w-20" />
-              <img src="/expo.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" className="h-20 w-20"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" className="h-20 w-20" alt="react"/>
+              <Image src="/react-native-1.svg" className="h-20 w-20" alt="react-native"/>
+              <Image src="/expo.svg" className="h-20 w-20" alt="expo"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" className="h-20 w-20" alt="html"/>
             </div>
           </div>
           <div>
@@ -128,10 +128,10 @@ export default function Home() {
               Tools
             </div>
             <div className="grid grid-cols-2 gap-2">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" className="h-20 w-20"/>
-              <img src="/aws.svg" className="h-20 w-20"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" className="h-20 w-20" alt="gitlab"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" className="h-20 w-20" alt="docker"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" className="h-20 w-20" alt="figma"/>
+              <Image src="/aws.svg" className="h-20 w-20" alt="aws"/>
             </div>
           </div>
           <div>
@@ -139,10 +139,10 @@ export default function Home() {
               Others
             </div>
             <div className="grid grid-cols-2 gap-2">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" className="h-20 w-20"/>
-              <img src="/c++.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" className="h-20 w-20"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" className="h-20 w-20"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" className="h-20 w-20" alt="oracle"/>
+              <Image src="/c++.svg" className="h-20 w-20" alt="c++"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" className="h-20 w-20" alt="postman"/>
+              <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" className="h-20 w-20" alt="jest"/>
             </div>
           </div>
         </div>
