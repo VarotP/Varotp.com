@@ -1,7 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://varotp-dev.vercel.app',
-    generateRobotsTxt: true,
-    generateIndexSitemap: false,
-  };
-  
+  siteUrl: 'https://varotp-dev.vercel.app',
+  generateRobotsTxt: true,
+  generateIndexSitemap: false,
+};
