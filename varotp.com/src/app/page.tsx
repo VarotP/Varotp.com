@@ -26,12 +26,6 @@ export default function Home() {
                 Resume
               </Link>
               <Link
-                href="projects"
-                className="px-4 py-1 bg-white text-black text-[20px] rounded-lg transition"
-              >
-                Projects
-              </Link>
-              <Link
                 href="blog"
                 className="px-4 py-1 bg-white text-black text-[20px] rounded-lg transition"
               >
