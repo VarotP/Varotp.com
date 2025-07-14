@@ -14,12 +14,12 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: 'Getting Started with Next.js 14',
+    title: 'Dear Future Me',
     excerpt:
-      "Learn about the latest features in Next.js 14 and how to leverage them in your projects. From server components to improved routing, we'll cover everything you need to know.",
+      "A letter from my past self to my future self",
     date: 'March 15, 2024',
     readTime: '5 min read',
-    category: 'Web Development',
+    category: 'Writing',
     link: 'helloworld',
   },
   {
@@ -56,13 +56,13 @@ export default function Blog() {
           <div className="space-x-5">
             <Link
               href="Varot_Pavaritpong___Resume__.pdf"
-              className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition"
+              className="px-4 py-2 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition"
             >
               Resume
             </Link>
             <Link
               href="projects"
-              className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition"
+              className="px-4 py-2 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition"
             >
               Projects
             </Link>

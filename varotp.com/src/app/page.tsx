@@ -21,13 +21,13 @@ export default function Home() {
         >
               <Link
                 href="Varot_Pavaritpong___Resume__.pdf"
-                className="px-4 py-1 bg-white text-black text-[20px] rounded-lg transition"
+                className="px-4 py-1 bg-white text-black text-[20px] rounded-lg  hover:shadow-lg transition"
               >
                 Resume
               </Link>
               <Link
                 href="blog"
-                className="px-4 py-1 bg-white text-black text-[20px] rounded-lg transition"
+                className="px-4 py-1 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition"
               >
                 Blog
               </Link>
@@ -72,7 +72,7 @@ export default function Home() {
               </Link>
               </motion.nav>
             </div>
-        <div className="flex flex-col items-center justify-center p-6 space-y-6 md:flex-row md:h-[calc(100vh-10vh)] md:space-y-0 md:space-x-45 md:px-50 md:py-10">
+        <div className="flex flex-col items-center justify-center p-6 space-y-6 md:flex-row md:h-[calc(100vh)] md:space-y-0 md:space-x-45 md:px-50 md:py-10">
           <div className="text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -108,7 +108,7 @@ export default function Home() {
             />
           </motion.div>
         </div>
-        <div className="flex flex-col items-center mb-75">
+        <div className="flex flex-col items-center md:mb-75 mb-25">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ export default function Home() {
             <div className="text-[48px] text-black font-poppins text-center mb-5">
               About Me
             </div>
-            <div className="text-[20px] text-black font-poppins w-1/2 mx-auto text-justify mt-4">
+            <div className="text-[20px] text-black font-poppins md:w-1/2 w-3xs mx-auto text-justify mt-4">
               I’m a full stack developer who believes great ideas come to life
               through curiosity, creativity, and clean code. Currently, I’m a
               third-year Computer Science student at UBC, where I’m honing my
@@ -131,7 +131,7 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-        <div className="mb-50">
+        <div className="md:mb-50 mb-25">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

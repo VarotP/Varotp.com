@@ -4,6 +4,8 @@ import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from "next/image";
 import Link from 'next/link';
+import { mdxComponents } from '../components/mdxComponent'; // adjust path as needed
+
 
 export async function generateStaticParams() {
   const files = fs.readdirSync(path.join(process.cwd(), 'content/blog'));
@@ -33,10 +35,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               <Link href="/Varot_Pavaritpong___Resume__.pdf" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition">
                 Resume
               </Link>
-              <Link href="/blog" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition">
+              <Link href="/blog" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition">
                 Blog 
               </Link>
-              <Link href="/projects" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition">
+              <Link href="/projects" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition">
                 Projects
               </Link>
               <Link href="https://github.com/VarotP" target="_blank" rel="noopener noreferrer">
@@ -55,11 +57,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               </Link>
             </div>
           </nav>
-          <div className='max-w-4xl mx-auto px-4 py-12'>
+          <div className='max-w-4xl mx-auto px-8 py-4 bg-white rounded-lg shadow-lg mb-10'>
             <h1 className="text-4xl text-black font-bold mb-2">{data.title}</h1>
-            <p className="text-sm text-black">{data.date}</p>
+            <p className="text-sm text-black mb-3">{data.date}</p>
+            <hr className="border-t border-blue-300 mtop-6 " />
+
             <div className="prose dark:prose-invert text-black max-w-none mt-6">
-              <MDXRemote source={content} />
+              <MDXRemote source={content} components={mdxComponents}/>
             </div>
           </div> 
           <footer className="mt-auto border-t border-blue-300">
