@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VarotP.dev – Portfolio & Notion-Powered Blog
 
-## Getting Started
+Welcome to my personal portfolio and blog, built with Next.js, Tailwind CSS, and seamlessly integrated with Notion as a headless CMS. This project showcases my work, technical writing, and passion for clean, modern web development.
 
-First, run the development server:
+## 🚀 Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Live Site:** [https://varotp.dev](https://varotp.dev)
+- **Tech Stack:** Next.js 15, React 19, Tailwind CSS 4, Notion API, TypeScript
+- **CMS:** Notion (write blog posts in Notion, publish instantly)
+- **Deployment:** Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Notion-Powered Blog:** Write and manage blog posts directly in Notion. Supports rich text (bold, italic, underline, code, links, etc.).
+- **Hybrid Content:** Supports both Notion and MDX blog posts for maximum flexibility.
+- **Modern UI:** Responsive, accessible, and visually appealing design with Tailwind CSS.
+- **SEO Optimized:** Dynamic Open Graph tags, sitemap, and robots.txt for discoverability.
+- **Fast & Scalable:** Built with the latest Next.js app directory and React Server Components.
+- **Easy Deployment:** One-click deploy to Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 For Recruiters
 
-## Learn More
+Thank you for visiting my portfolio! This project demonstrates:
+- **Full-stack proficiency:** API integration, server-side rendering, and modern React patterns.
+- **Clean code:** Modular, maintainable, and well-documented codebase.
+- **Content workflow:** Write once in Notion, publish everywhere.
+- **Attention to detail:** Custom components, accessibility, and pixel-perfect design.
 
-To learn more about Next.js, take a look at the following resources:
+Feel free to explore the code, read my blog posts, or connect with me on [LinkedIn](https://www.linkedin.com/in/varot-pavaritpong/).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/VarotP/varotp.dev.git
+   cd varotp.dev/varotp.com
+   ```
+2. **Install dependencies:**
+   ```bash
+   yarn install
+   # or npm install
+   ```
+3. **Set up Notion integration:**
+   - Create a Notion integration and database (see below).
+   - Add your `NOTION_API_KEY` and `NOTION_DATABASE_ID` to `.env.local`.
+4. **Run the development server:**
+   ```bash
+   yarn dev
+   # or npm run dev
+   ```
+5. **Open [http://localhost:3000](http://localhost:3000) to view the site.**
 
-## Deploy on Vercel
+## 🧠 Notion Blog Integration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Write posts in Notion:** Each row in your Notion database is a blog post. Write your content in the page body.
+- **Supported formatting:** Bold, italic, underline, strikethrough, code, links, lists, headings, and more.
+- **Instant publishing:** Check the "Published" box in Notion to publish a post.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Project Structure
+
+- `src/app/` – Next.js app directory (pages, layouts, blog, etc.)
+- `src/lib/notion.ts` – Notion API integration and content conversion
+- `src/app/blog/components/` – Reusable blog components (MDX, Footer, etc.)
+- `content/blog/` – Legacy MDX blog posts (optional)
+
+## 🌐 Connect
+
+- **Portfolio:** [https://varotp.dev](https://varotp.dev)
+- **LinkedIn:** [Varot Pavaritpong](https://www.linkedin.com/in/varot-pavaritpong/)
+- **GitHub:** [VarotP](https://github.com/VarotP)
+
+---
+
+> Built with ❤️ by Varot Pavaritpong. Powered by Next.js, Tailwind CSS, and Notion.

@@ -10,6 +10,8 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "date-fns": "^2.30.0",
     "framer-motion": "^12.18.1",
     "gray-matter": "^4.0.3",
     "motion": "^12.18.1",

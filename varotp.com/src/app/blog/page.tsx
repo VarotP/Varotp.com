@@ -1,50 +1,49 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { getNotionPosts, NotionPost } from '@/lib/notion';
+import Footer from './components/Footer';
 
-interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  date: string;
-  readTime: string;
-  category: string;
-  link: string;
-}
-
-const blogPosts: BlogPost[] = [
+// Fallback posts in case Notion API fails
+const fallbackPosts = [
   {
-    id: 1,
+    id: '1',
     title: 'Dear Future Me',
-    excerpt:
-      "A letter from my past self to my future self",
+    excerpt: "A letter from my past self to my future self",
     date: 'March 15, 2024',
     readTime: '5 min read',
     category: 'Writing',
-    link: 'helloworld',
+    slug: 'helloworld',
   },
   {
-    id: 2,
+    id: '2',
     title: 'The Art of Clean Code',
-    excerpt:
-      "Writing clean, maintainable code is an art form. In this post, we'll explore best practices, design patterns, and principles that will help you write better code.",
+    excerpt: "Writing clean, maintainable code is an art form. In this post, we'll explore best practices, design patterns, and principles that will help you write better code.",
     date: 'March 10, 2024',
     readTime: '8 min read',
     category: 'Programming',
-    link: 'helloworld',
+    slug: 'helloworld',
   },
   {
-    id: 3,
+    id: '3',
     title: 'Building Scalable Applications with TypeScript',
-    excerpt:
-      "TypeScript has revolutionized how we write JavaScript. Discover how to build robust, scalable applications using TypeScript's powerful type system.",
+    excerpt: "TypeScript has revolutionized how we write JavaScript. Discover how to build robust, scalable applications using TypeScript's powerful type system.",
     date: 'March 5, 2024',
     readTime: '6 min read',
     category: 'TypeScript',
-    link: 'helloworld',
+    slug: 'helloworld',
   },
 ];
 
-export default function Blog() {
+export default async function Blog() {
+  // Try to fetch posts from Notion, fallback to static posts if it fails
+  let posts: NotionPost[] = [];
+  try {
+    posts = await getNotionPosts();
+  } catch (error) {
+    console.error('Failed to fetch Notion posts, using fallback:', error);
+    posts = fallbackPosts as NotionPost[];
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <div
@@ -111,7 +110,7 @@ export default function Blog() {
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
 
           <div className="space-y-8">
-            {blogPosts.map((post) => (
+            {posts.map((post) => (
               <article
                 key={post.id}
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition"
@@ -131,7 +130,7 @@ export default function Blog() {
                 </h2>
                 <p className="text-gray-600 mb-4">{post.excerpt}</p>
                 <Link
-                  href={`/blog/${post.link}`}
+                  href={`/blog/${post.slug}`}
                   className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
                 >
                   Read more
@@ -153,17 +152,7 @@ export default function Blog() {
             ))}
           </div>
         </div>
-        <div className="footer">
-          <hr className="border-t border-blue-300 mtop-6 mx-20" />
-          <div className="flex flex-row items-center justify-between px-20 py-10">
-            <p className="text-center text-gray-500 text-sm">
-              Built with Next.js and Tailwind CSS, Deployed on Vercel.
-            </p>
-            <p className="text-center text-gray-500 text-sm">
-              © 2023 Varot Pavaritpong. All rights reserved.
-            </p>
-          </div>
-        </div>
+        <Footer />
       </div>
     </div>
   );
