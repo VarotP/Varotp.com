@@ -50,9 +50,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           style={{ backgroundImage: "url('/background.png')" }}
           >
               <nav className="p-4 flex justify-between items-center">
-              <div className="text-2xl font-bold text-black">
+              <Link href="/" className="text-2xl font-bold text-black">
                 VarotP
-              </div>
+              </Link>
               <div className="space-x-5">
                 <Link href="/Varot_Pavaritpong___Resume__.pdf" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition">
                   Resume
@@ -108,9 +108,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         style={{ backgroundImage: "url('/background.png')" }}
         >
             <nav className="p-4 flex justify-between items-center">
-            <div className="text-2xl font-bold text-black">
+            <Link href="/" className="text-2xl font-bold text-black">
               VarotP
-            </div>
+            </Link>
             <div className="space-x-5">
               <Link href="/Varot_Pavaritpong___Resume__.pdf" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition">
                 Resume
