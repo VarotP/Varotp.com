@@ -1,5 +1,10 @@
 import { Client } from '@notionhq/client';
 import { format } from 'date-fns';
+import {
+  BlockObjectResponse,
+  RichTextItemResponse,
+  PageObjectResponse,
+} from '@notionhq/client/build/src/api-endpoints';
 
 const notion = new Client({
   auth: process.env.NOTION_API_KEY,
@@ -18,19 +23,19 @@ export interface NotionPost {
 }
 
 // Helper to render Notion rich text with Markdown/MDX formatting
-function renderRichText(richTextArr: any[]): string {
+function renderRichText(richTextArr: RichTextItemResponse[], skipBold = false): string {
   return richTextArr
-    .map((text: any) => {
+    .map((text) => {
       let content = text.plain_text;
       const { bold, italic, underline, strikethrough, code } = text.annotations;
-      // Apply code first (highest precedence)
       if (code) content = `\`${content}\``;
-      // Apply bold, italic, strikethrough, underline (nesting order)
-      if (bold) content = `**${content}**`;
-      if (italic) content = `*${content}*`;
+      if (!skipBold) {
+        if (bold && italic) content = `***${content}***`;
+        else if (bold) content = `**${content}**`;
+        else if (italic) content = `*${content}*`;
+      }
       if (strikethrough) content = `~~${content}~~`;
-      if (underline) content = `<u>${content}</u>`; // Markdown doesn't support underline, so use HTML
-      // Handle links
+      if (underline) content = `<u>${content}</u>`;
       if (text.href) content = `[${content}](${text.href})`;
       return content;
     })
@@ -38,7 +43,7 @@ function renderRichText(richTextArr: any[]): string {
 }
 
 // Convert Notion blocks to MDX format
-function convertNotionBlocksToMDX(blocks: any[]): string {
+function convertNotionBlocksToMDX(blocks: BlockObjectResponse[]): string {
   let mdxContent = '';
 
   blocks.forEach((block) => {
@@ -49,17 +54,17 @@ function convertNotionBlocksToMDX(blocks: any[]): string {
         break;
       }
       case 'heading_1': {
-        const h1Text = renderRichText(block.heading_1.rich_text);
+        const h1Text = renderRichText(block.heading_1.rich_text, true);
         mdxContent += `# ${h1Text}\n\n`;
         break;
       }
       case 'heading_2': {
-        const h2Text = renderRichText(block.heading_2.rich_text);
+        const h2Text = renderRichText(block.heading_2.rich_text, true);
         mdxContent += `## ${h2Text}\n\n`;
         break;
       }
       case 'heading_3': {
-        const h3Text = renderRichText(block.heading_3.rich_text);
+        const h3Text = renderRichText(block.heading_3.rich_text, true);
         mdxContent += `### ${h3Text}\n\n`;
         break;
       }
@@ -89,7 +94,6 @@ function convertNotionBlocksToMDX(blocks: any[]): string {
         break;
       }
       default: {
-        // For unsupported block types, just add a newline
         mdxContent += '\n';
         break;
       }
@@ -118,25 +122,24 @@ export async function getNotionPosts(): Promise<NotionPost[]> {
       ],
     });
 
+    /* eslint-disable @typescript-eslint/no-explicit-any */
     const posts = await Promise.all(
-      response.results.map(async (page: any) => {
-        const pageId = page.id;
-        
+      response.results.map(async (page) => {
+        const pageTyped = page as PageObjectResponse;
+        const pageId = pageTyped.id;
         // Get the page content
         const blocksResponse = await notion.blocks.children.list({
           block_id: pageId,
         });
-
-        const mdxContent = convertNotionBlocksToMDX(blocksResponse.results);
-
+        const mdxContent = convertNotionBlocksToMDX(blocksResponse.results as BlockObjectResponse[]);
         // Extract properties
-        const title = page.properties.Title?.title?.[0]?.plain_text || 'Untitled';
-        const excerpt = page.properties.Excerpt?.rich_text?.[0]?.plain_text || '';
-        const category = page.properties.Category?.select?.name || 'General';
-        const date = page.properties.Date?.date?.start || page.created_time;
-        const slug = page.properties.Slug?.rich_text?.[0]?.plain_text || 
+        const title = (pageTyped.properties.Title as any)?.title?.[0]?.plain_text || 'Untitled';
+        const excerpt = (pageTyped.properties.Excerpt as any)?.rich_text?.[0]?.plain_text || '';
+        const category = (pageTyped.properties.Category as any)?.select?.name || 'General';
+        const date = (pageTyped.properties.Date as any)?.date?.start || pageTyped.created_time;
+        const slug = (pageTyped.properties.Slug as any)?.rich_text?.[0]?.plain_text || 
                     title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-        const readTime = page.properties.ReadTime?.rich_text?.[0]?.plain_text || '5 min read';
+        const readTime = (pageTyped.properties.ReadTime as any)?.rich_text?.[0]?.plain_text || '5 min read';
 
         return {
           id: pageId,
@@ -151,6 +154,7 @@ export async function getNotionPosts(): Promise<NotionPost[]> {
         };
       })
     );
+    /* eslint-enable @typescript-eslint/no-explicit-any */
 
     return posts;
   } catch (error) {
