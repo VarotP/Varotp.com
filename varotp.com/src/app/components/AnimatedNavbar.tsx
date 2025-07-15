@@ -31,6 +31,12 @@ const AnimatedNavbar = () => (
         Projects
       </Link>
       <Link
+        href="blog"
+        className="px-4 py-2 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition"
+      >
+        Blog
+      </Link>
+      <Link
         href="https://github.com/VarotP"
         target="_blank"
         rel="noopener noreferrer"

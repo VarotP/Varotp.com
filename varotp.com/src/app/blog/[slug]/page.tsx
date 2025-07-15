@@ -4,9 +4,9 @@ import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from "next/image";
 import Link from 'next/link';
-import { mdxComponents } from '../components/mdxComponent';
+import { mdxComponents } from '../../components/mdxComponent';
 import { getNotionPost, getNotionPosts } from '@/lib/notion';
-import Footer from '../components/Footer';
+import Footer from '../../components/Footer';
 
 export async function generateStaticParams() {
   // Get both MDX files and Notion posts

@@ -1,7 +1,7 @@
 import { getNotionPosts, NotionPost } from '@/lib/notion';
-import Footer from './components/Footer';
-import AnimatedNavbar from './components/AnimatedNavbar';
-import BlogListClient from './components/BlogListClient';
+import Footer from '../components/Footer';
+import AnimatedNavbar from '../components/AnimatedNavbar';
+import BlogListClient from './[slug]/BlogListClient';
 
 // Fallback posts in case Notion API fails
 const fallbackPosts = [

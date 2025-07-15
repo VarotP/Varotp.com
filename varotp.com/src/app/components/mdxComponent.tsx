@@ -1,9 +1,7 @@
 // components/mdxComponents.js
 import { JSX, ClassAttributes, HTMLAttributes } from 'react';
-import TestComponent from './testComponent';
 
 export const mdxComponents = {
-  TestComponent,
   // You can also override default tags:
   h1: (props: JSX.IntrinsicAttributes & ClassAttributes<HTMLHeadingElement> & HTMLAttributes<HTMLHeadingElement>) => <h1 className="text-3xl font-extrabold mb-4" {...props} />,
   h2: (props: JSX.IntrinsicAttributes & ClassAttributes<HTMLHeadingElement> & HTMLAttributes<HTMLHeadingElement>) => <h2 className="text-2xl font-bold mb-3" {...props} />,

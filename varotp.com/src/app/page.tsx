@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import AnimatedNavbar from './components/AnimatedNavbar';
+import Footer from './components/Footer';
 
 export default function Home() {
       return (
@@ -11,66 +13,7 @@ export default function Home() {
           className="bg-no-repeat bg-center bg-cover w-full pb-20"
           style={{ backgroundImage: "url('/background.png')" }}
         >
-            <div className="">
-            <motion.nav
-          initial={{ opacity: 0, x: 100 }} // 100px to the right
-          animate={{ opacity: 1, x: 0 }} // slide in to normal
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="p-4   flex justify-end items-center space-x-5"
-        >
-              <Link
-                href="Varot_Pavaritpong___Resume__.pdf"
-                className="px-4 py-1 bg-white text-black text-[20px] rounded-lg  hover:shadow-lg transition"
-              >
-                Resume
-              </Link>
-              <Link
-                href="blog"
-                className="px-4 py-1 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition"
-              >
-                Blog
-              </Link>
-              <Link
-                href="https://github.com/VarotP"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-                  className="inline-block h-9 w-9"
-                  alt="GitHub"
-                  width={9}
-                  height={9}
-                />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/varot-pavaritpong/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
-                  className="inline-block h-9 w-9"
-                  alt="linkedIn"
-                  width={9}
-                  height={9}
-                />
-              </Link>
-              <Link
-                href="https://www.instagram.com/val12.ig/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/Instagram.svg"
-                  className="inline-block h-9 w-9"
-                  alt="Instagram"
-                  width={9}
-                  height={9}
-                />
-              </Link>
-              </motion.nav>
-            </div>
+            <AnimatedNavbar />
         <div className="flex flex-col items-center justify-center p-6 space-y-6 md:flex-row md:h-[calc(100vh)] md:space-y-0 md:space-x-45 md:px-50 md:py-10">
           <div className="text-center md:text-left">
             <motion.div
@@ -159,7 +102,7 @@ export default function Home() {
               <div>
                 <div className="relative bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
                   <Link
-                    href="https://github.com/VarotP/CatClicker"
+                    href="projects"
                     className="flex flex-col items-center"
                   >
                     <Image
@@ -177,7 +120,7 @@ export default function Home() {
               <div>
                 <div className="relative bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
                   <Link
-                    href="https://github.com/VarotP/DailyPlan-Forecast"
+                    href="projects"
                     className="flex flex-col items-center"
                   >
                     <Image
@@ -197,7 +140,7 @@ export default function Home() {
               <div>
                 <div className="relative bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
                   <Link
-                    href="https://github.com/RandoNandoz/nwhacks-project"
+                    href="projects"
                     className="flex flex-col items-center"
                   >
                     <Image
@@ -215,7 +158,7 @@ export default function Home() {
               <div>
                 <div className="relative bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
                   <Link
-                    href="https://github.com/ThienB2/Plannify-React"
+                    href="projects"
                     className="flex flex-col items-center"
                   >
                     <Image
@@ -423,17 +366,7 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <div className="footer">
-        <hr className="border-t border-blue-300 mtop-6 mx-20" />
-        <div className="flex flex-row items-center justify-between px-20 py-10">
-          <p className="text-center text-gray-500 text-sm">
-            Built with Next.js and Tailwind CSS, Deployed on Vercel.
-          </p>
-          <p className="text-center text-gray-500 text-sm">
-            © 2023 Varot Pavaritpong. All rights reserved.
-          </p>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }
