@@ -79,14 +79,16 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 </Link>
               </div>
             </nav>
-            <div className='max-w-4xl mx-auto px-8 py-4 bg-white rounded-lg shadow-lg mb-10'>
+            <div className='max-w-4xl mx-auto px-20 py-7 bg-white rounded-lg shadow-lg mb-10'>
               <h1 className="text-4xl text-black font-bold mb-2">{notionPost.title}</h1>
               <p className="text-sm text-black mb-3">{notionPost.date}</p>
               <hr className="border-t border-blue-300 mtop-6 " />
 
-              <div className="prose dark:prose-invert text-black max-w-none mt-6">
-                <MDXRemote source={notionPost.content} components={mdxComponents}/>
-              </div>
+              <div className="prose flex flex-col items-center">
+                <div className="prose dark:prose-invert text-black max-w-none mt-6">
+                  <MDXRemote source={notionPost.content} components={mdxComponents}/>
+                </div>
+              </div> 
             </div> 
             <Footer />
           </div>

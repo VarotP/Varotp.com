@@ -27,6 +27,14 @@ function renderRichText(richTextArr: RichTextItemResponse[], skipBold = false): 
   return richTextArr
     .map((text) => {
       let content = text.plain_text;
+      
+      // Preserve leading whitespace by replacing spaces with non-breaking spaces
+      const leadingSpaces = content.match(/^(\s+)/);
+      if (leadingSpaces) {
+        const spaceCount = leadingSpaces[1].length;
+        content = '\u00A0'.repeat(spaceCount) + content.substring(spaceCount);
+      }
+      
       const { bold, italic, underline, strikethrough, code } = text.annotations;
       if (code) content = `\`${content}\``;
       if (!skipBold) {
@@ -50,7 +58,12 @@ function convertNotionBlocksToMDX(blocks: BlockObjectResponse[]): string {
     switch (block.type) {
       case 'paragraph': {
         const text = renderRichText(block.paragraph.rich_text);
-        mdxContent += `${text}\n\n`;
+        // If the paragraph is empty, add a non-breaking space to create a visible empty line
+        if (!text.trim()) {
+          mdxContent += `&nbsp;\n\n`;
+        } else {
+          mdxContent += `${text}\n\n`;
+        }
         break;
       }
       case 'heading_1': {

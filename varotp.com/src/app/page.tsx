@@ -5,13 +5,12 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Home() {
-  return (
-    <div className="bg-white">
-      <div className="relative"></div>
-      <div
-        className="bg-no-repeat bg-center bg-cover w-full"
-        style={{ backgroundImage: "url('/background.png')" }}
-      >
+      return (
+      <div className="bg-white">
+        <div
+          className="bg-no-repeat bg-center bg-cover w-full pb-20"
+          style={{ backgroundImage: "url('/background.png')" }}
+        >
             <div className="">
             <motion.nav
           initial={{ opacity: 0, x: 100 }} // 100px to the right
@@ -424,7 +423,6 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <div className="h-[50px] bg-white"></div>
       <div className="footer">
         <hr className="border-t border-blue-300 mtop-6 mx-20" />
         <div className="flex flex-row items-center justify-between px-20 py-10">
