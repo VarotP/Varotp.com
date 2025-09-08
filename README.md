@@ -1,10 +1,10 @@
-# VarotP.dev – Portfolio & Notion-Powered Blog
+# VarotP.com – Portfolio & Notion-Powered Blog
 
 Welcome to my personal portfolio and blog, built with Next.js, Tailwind CSS, and seamlessly integrated with Notion as a headless CMS. This project showcases my work, technical writing, and passion for clean, modern web development.
 
 ## 🚀 Project Overview
 
-- **Live Site:** [https://varotp.dev](https://varotp.dev)
+- **Live Site:** [https://varotp.com](https://varotp.com)
 - **Tech Stack:** Next.js 15, React 19, Tailwind CSS 4, Notion API, TypeScript
 - **CMS:** Notion (write blog posts in Notion, publish instantly)
 - **Deployment:** Vercel
@@ -33,7 +33,7 @@ Feel free to explore the code, read my blog posts, or connect with me on [Linked
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/VarotP/varotp.dev.git
-   cd varotp.dev/varotp.com
+   cd varotp.com/varotp.com
    ```
 2. **Install dependencies:**
    ```bash
@@ -65,7 +65,7 @@ Feel free to explore the code, read my blog posts, or connect with me on [Linked
 
 ## 🌐 Connect
 
-- **Portfolio:** [https://varotp.dev](https://varotp.dev)
+- **Portfolio:** [https://varotp.com](https://varotp.com)
 - **LinkedIn:** [Varot Pavaritpong](https://www.linkedin.com/in/varot-pavaritpong/)
 - **GitHub:** [VarotP](https://github.com/VarotP)
 

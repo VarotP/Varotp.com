@@ -14,7 +14,7 @@ const projects: Project[] = [
     description: 'A machine learning model that predicts the popularity of Airbnb listings based on various features like location, amenities, and pricing.',
     image: '/airbnb.png',
     technologies: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
-    githubUrl: 'https://github.com/VarotP/airbnb-predictor',
+    githubUrl: 'https://github.com/VarotP/Airbnb-Predictor',
     category: 'Machine Learning'
   },
   {
@@ -24,7 +24,6 @@ const projects: Project[] = [
     image: '/catclicker.png',
     technologies: ['JavaScript', 'HTML', 'CSS', 'Game Development'],
     githubUrl: 'https://github.com/VarotP/CatClicker',
-    liveUrl: 'https://catclicker-game.vercel.app',
     category: 'Game Development'
   },
   {
