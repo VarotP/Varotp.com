@@ -11,6 +11,7 @@ export interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  devpostUrl?: string;
   category: string;
 }
 
@@ -57,7 +58,7 @@ export default function ProjectsListClient({ projects }: { projects: Project[] }
                 </span>
               ))}
             </div>
-            <div className="flex space-x-3">
+            <div className="flex flex-wrap gap-3">
               {project.githubUrl && (
                 <Link
                   href={project.githubUrl}
@@ -89,6 +90,29 @@ export default function ProjectsListClient({ projects }: { projects: Project[] }
                   className="text-green-600 hover:text-green-800 font-medium inline-flex items-center"
                 >
                   Live Demo
+                  <svg
+                    className="w-4 h-4 ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </Link>
+              )}
+              {project.devpostUrl && (
+                <Link
+                  href={project.devpostUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-600 hover:text-purple-800 font-medium inline-flex items-center"
+                >
+                  Devpost
                   <svg
                     className="w-4 h-4 ml-1"
                     fill="none"

@@ -54,7 +54,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 VarotP
               </Link>
               <div className="space-x-5">
-                <Link href="/Varot_Pavaritpong___Resume__.pdf" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition">
+                <Link href="/Varot_Pavaritpong___Resume.pdf" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition">
                   Resume
                 </Link>
                 <Link href="/blog" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition">
@@ -114,7 +114,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               VarotP
             </Link>
             <div className="space-x-5">
-              <Link href="/Varot_Pavaritpong___Resume__.pdf" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition">
+              <Link href="/Varot_Pavaritpong___Resume.pdf" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg transition">
                 Resume
               </Link>
               <Link href="/blog" className="px-4 py-2 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition">

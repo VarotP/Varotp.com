@@ -9,6 +9,16 @@ import { motion } from 'framer-motion';
 // Sample projects data
 const projects: Project[] = [
   {
+    id: '0',
+    title: 'PhishPatrol',
+    description: 'PhishPatrol is a cybersecurity simulation platform that helps companies test and improve employee resistance to phishing and scam calls through interactive voice and email attack simulations.',
+    image: '/phishpatrol.png',
+    technologies: ['OpenAI API', 'Twilio API', 'Elvenlabs', 'Nextjs', 'Snowflake'],
+    githubUrl: 'https://github.com/jamiekim22/stormhacks-25-26',
+    devpostUrl: 'https://devpost.com/software/phishpatrol/',
+    category: 'Hackathon'
+  },
+  {
     id: '1',
     title: 'Airbnb Popularity Predictor',
     description: 'A machine learning model that predicts the popularity of Airbnb listings based on various features like location, amenities, and pricing.',
@@ -16,6 +26,16 @@ const projects: Project[] = [
     technologies: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
     githubUrl: 'https://github.com/VarotP/Airbnb-Predictor',
     category: 'Machine Learning'
+  },
+  {
+    id: '6',
+    title: 'Portfolio Website',
+    description: 'A modern, responsive portfolio website built with Next.js, featuring a blog with Notion integration and smooth animations.',
+    image: '/myPhoto.png',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Notion API'],
+    githubUrl: 'https://github.com/VarotP/varotp.dev',
+    liveUrl: 'https://varotp.dev',
+    category: 'Web Development'
   },
   {
     id: '2',
@@ -53,16 +73,6 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/ThienB2/Plannify-React',
     category: 'Productivity'
   },
-  {
-    id: '6',
-    title: 'Portfolio Website',
-    description: 'A modern, responsive portfolio website built with Next.js, featuring a blog with Notion integration and smooth animations.',
-    image: '/myPhoto.png',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Notion API'],
-    githubUrl: 'https://github.com/VarotP/varotp.dev',
-    liveUrl: 'https://varotp.dev',
-    category: 'Web Development'
-  }
 ];
 
 export default function Projects() {
