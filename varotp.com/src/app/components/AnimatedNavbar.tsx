@@ -19,7 +19,7 @@ const AnimatedNavbar = () => (
       className="space-x-5"
     >
       <Link
-        href="Varot_Pavaritpong___Resume__.pdf"
+        href="Varot_Pavaritpong___Resume.pdf"
         className="px-4 py-2 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition"
       >
         Resume
