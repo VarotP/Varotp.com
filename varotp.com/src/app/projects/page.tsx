@@ -87,7 +87,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white transition-colors duration-300">
       <div
         className="bg-no-repeat bg-center bg-cover w-full min-h-screen"
         style={{ backgroundImage: "url('/background.png')" }}

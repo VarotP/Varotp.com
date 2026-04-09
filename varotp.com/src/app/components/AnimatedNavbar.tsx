@@ -10,6 +10,7 @@ const navLinks = [
 ];
 
 const socialLinks = [
+  { href: 'mailto:varotpava@gmail.com', src: '/email.svg', alt: 'Email' },
   { href: 'https://github.com/VarotP', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg', alt: 'GitHub' },
   { href: 'https://www.linkedin.com/in/varot-pavaritpong/', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg', alt: 'LinkedIn' },
   { href: 'https://www.instagram.com/val12.ig/', src: '/Instagram.svg', alt: 'Instagram' },
@@ -17,6 +18,11 @@ const socialLinks = [
 
 const AnimatedNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Dark mode disabled for now - will add new graphics later
+  const toggleDarkMode = () => {
+    // Do nothing for now
+  };
 
   return (
     <nav className="relative p-4 flex justify-between items-center font-plus-jakarta-sans font-medium">
@@ -35,15 +41,17 @@ const AnimatedNavbar = () => {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="hidden md:flex items-center space-x-5"
       >
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="px-4 py-2 bg-white text-black text-[20px] rounded-lg hover:shadow-lg transition"
-          >
-            {link.label}
-          </Link>
-        ))}
+        <div className="flex items-center">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="px-4 py-2 text-black text-[20px] rounded-lg hover:bg-black/10 transition"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
         {socialLinks.map((link) => (
           <Link
             key={link.alt}
@@ -60,30 +68,52 @@ const AnimatedNavbar = () => {
             />
           </Link>
         ))}
+        <button
+          onClick={toggleDarkMode}
+          className="p-2 rounded-lg hover:bg-black/10 transition"
+          aria-label="Toggle dark mode"
+        >
+          <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
       </motion.div>
 
       {/* Mobile menu button */}
-      <motion.button
+      <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="md:hidden p-2 rounded-lg bg-white hover:shadow-lg transition"
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        aria-label="Toggle menu"
+        className="md:hidden flex items-center space-x-2"
       >
-        <svg
-          className="w-6 h-6 text-black"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+        <button
+          onClick={toggleDarkMode}
+          className="p-2 rounded-lg hover:bg-black/10 transition"
+          aria-label="Toggle dark mode"
         >
-          {mobileMenuOpen ? (
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          ) : (
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          )}
-        </svg>
-      </motion.button>
+          <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <button
+          className="p-2 rounded-lg hover:bg-black/10 transition"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg
+            className="w-6 h-6 text-black"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            {mobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
+      </motion.div>
 
       {/* Mobile dropdown menu */}
       <AnimatePresence>

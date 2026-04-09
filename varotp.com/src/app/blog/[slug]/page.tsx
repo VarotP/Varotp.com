@@ -55,7 +55,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               <hr className="border-t border-blue-300 mt-6" />
 
               <div className="prose flex flex-col items-center">
-                <div className="prose dark:prose-invert text-black max-w-none mt-6 overflow-x-auto">
+                <div className="prose text-black max-w-none mt-6 overflow-x-auto">
                   <MDXRemote source={notionPost.content} components={mdxComponents}/>
                 </div>
               </div> 
@@ -85,7 +85,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <p className="text-sm text-black mb-3">{data.date}</p>
             <hr className="border-t border-blue-300 mt-6" />
 
-            <div className="prose dark:prose-invert text-black max-w-none mt-6 overflow-x-auto">
+            <div className="prose text-black max-w-none mt-6 overflow-x-auto">
               <MDXRemote source={content} components={mdxComponents}/>
             </div>
           </div> 

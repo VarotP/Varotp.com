@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 export default function Home() {
       return (
-      <div className="bg-white">
+      <div className="bg-white transition-colors duration-300">
         <div
           className="bg-no-repeat bg-center bg-cover w-full pb-20"
           style={{ backgroundImage: "url('/background.png')", backgroundPosition: "center 25%" }}
@@ -245,9 +245,9 @@ export default function Home() {
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <Image
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
                     className="h-20 w-20"
-                    alt="spring"
+                    alt="flask"
                     width={20}
                     height={20}
                   />
@@ -259,16 +259,16 @@ export default function Home() {
                     height={20}
                   />
                   <Image
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
                     className="h-20 w-20"
-                    alt="mysql"
+                    alt="postgresql"
                     width={20}
                     height={20}
                   />
                   <Image
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
                     className="h-20 w-20"
-                    alt="java"
+                    alt="spring"
                     width={20}
                     height={20}
                   />
@@ -311,13 +311,13 @@ export default function Home() {
               </div>
               <div>
                 <div className="text-[20px] text-black font-poppins text-center">
-                  Tools
+                  DevOps
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <Image
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"
                     className="h-20 w-20"
-                    alt="gitlab"
+                    alt="kubernetes"
                     width={20}
                     height={20}
                   />
@@ -329,9 +329,30 @@ export default function Home() {
                     height={20}
                   />
                   <Image
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg"
                     className="h-20 w-20"
-                    alt="figma"
+                    alt="prometheus"
+                    width={20}
+                    height={20}
+                  />
+                  <Image
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg"
+                    className="h-20 w-20"
+                    alt="grafana"
+                    width={20}
+                    height={20}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="text-[20px] text-black font-poppins text-center">
+                  Tools
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <Image
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"
+                    className="h-20 w-20"
+                    alt="gitlab"
                     width={20}
                     height={20}
                   />
@@ -342,24 +363,10 @@ export default function Home() {
                     width={20}
                     height={20}
                   />
-                </div>
-              </div>
-              <div>
-                <div className="text-[20px] text-black font-poppins text-center">
-                  Others
-                </div>
-                <div className="grid grid-cols-2 gap-2">
                   <Image
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
                     className="h-20 w-20"
-                    alt="oracle"
-                    width={20}
-                    height={20}
-                  />
-                  <Image
-                    src="/c++.svg"
-                    className="h-20 w-20"
-                    alt="c++"
+                    alt="figma"
                     width={20}
                     height={20}
                   />
@@ -370,20 +377,13 @@ export default function Home() {
                     width={20}
                     height={20}
                   />
-                  <Image
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg"
-                    className="h-20 w-20"
-                    alt="jest"
-                    width={20}
-                    height={20}
-                  />
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
