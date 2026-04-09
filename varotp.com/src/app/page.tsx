@@ -11,10 +11,10 @@ export default function Home() {
       <div className="bg-white">
         <div
           className="bg-no-repeat bg-center bg-cover w-full pb-20"
-          style={{ backgroundImage: "url('/background.png')" }}
+          style={{ backgroundImage: "url('/background.png')", backgroundPosition: "center 25%" }}
         >
             <AnimatedNavbar />
-        <div className="flex flex-col items-center justify-center p-6 space-y-6 md:flex-row md:h-[calc(100vh)] md:space-y-0 md:space-x-45 md:px-50 md:py-10">
+        <div className="flex flex-col items-center justify-center p-6 space-y-6 md:flex-row md:h-[calc(100vh)] md:space-y-0 md:space-x-24 md:px-12 md:py-10">
           <div className="text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -41,26 +41,26 @@ export default function Home() {
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
           >
             <Image
-              src="/myPhoto.png"
+              src="/myPhoto.jpeg"
               alt="My Photo"
-              className="mx-auto mt-4"
-              width={256}
-              height={256}
+              className="mx-auto mt-4 border-2 border-white w-64 h-64 md:w-80 md:h-80"
+              width={340}
+              height={340}
               quality={100}
             />
           </motion.div>
         </div>
-        <div className="flex flex-col items-center md:mb-75 mb-25">
+        <div className="flex flex-col items-center md:mb-20 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <div className="text-[48px] text-black font-poppins text-center mb-5">
+            <div className="text-3xl md:text-[48px] text-black font-poppins text-center mb-5">
               About Me
             </div>
-            <div className="text-[20px] text-black font-poppins md:w-1/2 w-3xs mx-auto text-justify mt-4">
+            <div className="text-base md:text-[20px] text-black font-poppins w-[90%] max-w-xl mx-auto text-justify mt-4 px-1">
               I’m a full stack developer who believes great ideas come to life
               through curiosity, creativity, and clean code. Currently, I’m a
               third-year Computer Science student at UBC, where I’m honing my
@@ -73,120 +73,145 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-        <div className="md:mb-50 mb-25">
+        <div className="md:mb-16 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <div className="text-[48px] text-black font-poppins text-center mb-10">
+            <div className="text-3xl md:text-[48px] text-black font-poppins text-center mb-10">
               Projects
             </div>
-            <div className="flex flex-col justify-center items-center md:flex-row mb-10">
-              <div>
-                <div className="relative bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
-                  <Link href="projects" className="flex flex-col items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+              <Link href="projects" className="group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="relative h-40 bg-gray-100">
+                    <Image
+                      src="/pipelie.jpg"
+                      alt="pipelie-project-image"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <div className="text-[18px] text-black font-poppins font-semibold">
+                      PipeLie
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">Production-grade URL shortener with K8s</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="projects" className="group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="relative h-40 bg-gray-100">
+                    <Image
+                      src="/phishpatrol.png"
+                      alt="phishpatrol-project-image"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <div className="text-[18px] text-black font-poppins font-semibold">
+                      PhishPatrol
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">Cybersecurity phishing simulation platform</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="projects" className="group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="relative h-40 bg-gray-100">
                     <Image
                       src="/airbnb.png"
                       alt="airbnb-project-image"
                       fill
-                      sizes="(max-width: 768px) 50vw, 256px"
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                  </Link>
+                  </div>
+                  <div className="p-4">
+                    <div className="text-[18px] text-black font-poppins font-semibold">
+                      Airbnb Popularity Predictor
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">ML model for listing popularity</p>
+                  </div>
                 </div>
-                <div className="text-[20px] text-black font-poppins text-center">
-                  Airbnb Popularity Predictor
-                </div>
-              </div>
-              <div>
-                <div className="relative bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
-                  <Link
-                    href="projects"
-                    className="flex flex-col items-center"
-                  >
+              </Link>
+              <Link href="projects" className="group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="relative h-40 bg-gray-100">
                     <Image
-                      src="/catclicker.png"
-                      alt="catclicker-image"
+                      src="/Plantis.png"
+                      alt="plantis-project-image"
                       fill
-                      sizes="(max-width: 768px) 50vw, 256px"
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                  </Link>
+                  </div>
+                  <div className="p-4">
+                    <div className="text-[18px] text-black font-poppins font-semibold">
+                      Plantis
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">Plant care tracking application</p>
+                  </div>
                 </div>
-                <div className="text-[20px] text-black font-poppins text-center">
-                  Cat Clicker
+              </Link>
+              <Link href="projects" className="group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="relative h-40 bg-gray-100">
+                    <Image
+                      src="/Plannify.png"
+                      alt="plannify-project-image"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <div className="text-[18px] text-black font-poppins font-semibold">
+                      Plannify
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">Task management with calendar integration</p>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div className="relative bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
-                  <Link
-                    href="projects"
-                    className="flex flex-col items-center"
-                  >
+              </Link>
+              <Link href="projects" className="group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="relative h-40 bg-gray-100">
                     <Image
                       src="/forecast.png"
                       alt="dailyplan-forecast-image"
                       fill
-                      sizes="(max-width: 768px) 50vw, 256px"
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                  </Link>
+                  </div>
+                  <div className="p-4">
+                    <div className="text-[18px] text-black font-poppins font-semibold">
+                      DailyPlan Forecast
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">Weather-based planning app</p>
+                  </div>
                 </div>
-                <div className="text-[20px] text-black font-poppins text-center">
-                  DailyPlan Forecast
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center items-center md:flex-row mt-10">
-              <div>
-                <div className="relative bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
-                  <Link
-                    href="projects"
-                    className="flex flex-col items-center"
-                  >
-                    <Image
-                      src="/Plantis.png"
-                      alt="airbnb-project-image"
-                      fill
-                      sizes="(max-width: 768px) 50vw, 256px"
-                    />
-                  </Link>
-                </div>
-                <div className="text-[20px] text-black font-poppins text-center">
-                  Plantis
-                </div>
-              </div>
-              <div>
-                <div className="relative bg-gray-100 p-4 rounded-lg shadow-md m-4 w-75 h-75">
-                  <Link
-                    href="projects"
-                    className="flex flex-col items-center"
-                  >
-                    <Image
-                      src="/Plannify.png"
-                      alt="catclicker-image"
-                      fill
-                      sizes="(max-width: 768px) 50vw, 256px"
-                    />
-                  </Link>
-                </div>
-                <div className="text-[20px] text-black font-poppins text-center">
-                  Plannify
-                </div>
-              </div>
+              </Link>
             </div>
           </motion.div>
         </div>
-        <div className="whatIworkWith mb-50">
+        <div className="whatIworkWith mb-16">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <div className="text-[48px] text-black font-poppins text-center mb-15">
+            <div className="text-3xl md:text-[48px] text-black font-poppins text-center mb-8">
               What I Work With
             </div>
-            <div className="flex flex-col justify-center items-center space-y -10 md:flex-row md:space-x-10 md:space-y-0">
+            <div className="flex flex-col justify-center items-center space-y-10 md:flex-row md:space-x-10 md:space-y-0">
               <div>
                 <div className="text-[20px] text-black font-poppins text-center">
                   Languages

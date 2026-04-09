@@ -26,3 +26,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Prevent horizontal overflow from code blocks on mobile */
+.prose pre,
+.prose code {
+  max-width: 100%;
+  overflow-x: auto;
+}

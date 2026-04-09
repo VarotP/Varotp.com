@@ -9,6 +9,16 @@ import { motion } from 'framer-motion';
 // Sample projects data
 const projects: Project[] = [
   {
+    id: 'pipelie',
+    title: 'PipeLie',
+    description: 'A production-grade URL shortener API with analytics tracking, Valkey caching, and full observability stack including Prometheus, Grafana, and Loki. Built on a self-hosted K3s Kubernetes cluster across 3 physical servers.',
+    image: '/pipelie.jpg',
+    technologies: ['Python', 'Flask', 'PostgreSQL', 'Kubernetes', 'Docker', 'Prometheus', 'Grafana', 'Valkey'],
+    githubUrl: 'https://github.com/PipeLieDev/pe-hackathon',
+    devpostUrl: 'https://devpost.com/software/pipe-lie',
+    category: 'Hackathon'
+  },
+  {
     id: '0',
     title: 'PhishPatrol',
     description: 'PhishPatrol is a cybersecurity simulation platform that helps companies test and improve employee resistance to phishing and scam calls through interactive voice and email attack simulations.',
@@ -31,7 +41,7 @@ const projects: Project[] = [
     id: '6',
     title: 'Portfolio Website',
     description: 'A modern, responsive portfolio website built with Next.js, featuring a blog with Notion integration and smooth animations.',
-    image: '/myPhoto.png',
+    image: '/myPhoto.jpeg',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Notion API'],
     githubUrl: 'https://github.com/VarotP/varotp.dev',
     liveUrl: 'https://varotp.dev',

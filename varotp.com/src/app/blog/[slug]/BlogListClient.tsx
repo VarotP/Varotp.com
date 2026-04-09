@@ -23,7 +23,7 @@ export default function BlogListClient({ posts }: { posts: BlogListClientPost[] 
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 + idx * 0.15 }}
         >
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
             <span className="text-sm font-medium text-blue-600">
               {post.category}
             </span>
@@ -33,7 +33,7 @@ export default function BlogListClient({ posts }: { posts: BlogListClientPost[] 
               <span>{post.readTime}</span>
             </div>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
             {post.title}
           </h2>
           <p className="text-gray-600 mb-4">{post.excerpt}</p>
