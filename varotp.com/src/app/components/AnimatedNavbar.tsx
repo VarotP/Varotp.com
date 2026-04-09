@@ -68,7 +68,7 @@ const AnimatedNavbar = () => {
             />
           </Link>
         ))}
-        <button
+        {/* <button
           onClick={toggleDarkMode}
           className="p-2 rounded-lg hover:bg-black/10 transition"
           aria-label="Toggle dark mode"
@@ -76,7 +76,7 @@ const AnimatedNavbar = () => {
           <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
-        </button>
+        </button> */}
       </motion.div>
 
       {/* Mobile menu button */}
@@ -86,7 +86,7 @@ const AnimatedNavbar = () => {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="md:hidden flex items-center space-x-2"
       >
-        <button
+        {/* <button
           onClick={toggleDarkMode}
           className="p-2 rounded-lg hover:bg-black/10 transition"
           aria-label="Toggle dark mode"
@@ -94,7 +94,7 @@ const AnimatedNavbar = () => {
           <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
-        </button>
+        </button> */}
         <button
           className="p-2 rounded-lg hover:bg-black/10 transition"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
