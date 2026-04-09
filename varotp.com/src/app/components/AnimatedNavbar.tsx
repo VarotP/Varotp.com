@@ -19,13 +19,13 @@ const AnimatedNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="relative p-4 flex justify-between items-center">
+    <nav className="relative p-4 flex justify-between items-center font-plus-jakarta-sans font-medium">
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-        <Link href="/" className="text-2xl font-bold text-black">VarotP</Link>
+        <Link href="/" className="text-2xl font-medium text-black font-plus-jakarta-sans">VarotP</Link>
       </motion.div>
 
       {/* Desktop nav */}

@@ -14,14 +14,14 @@ export default function Home() {
           style={{ backgroundImage: "url('/background.png')", backgroundPosition: "center 25%" }}
         >
             <AnimatedNavbar />
-        <div className="flex flex-col items-center justify-center p-6 space-y-6 md:flex-row md:h-[calc(100vh)] md:space-y-0 md:space-x-24 md:px-12 md:py-10">
+        <div className="flex flex-col items-center justify-center p-6 space-y-6 md:flex-row md:h-[calc(100vh)] md:space-y-0 md:space-x-24 md:px-12 md:py-10 md:-mt-5">
           <div className="text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
             >
-              <p className="text-[40px] md:text-[64px] text-black">
+              <p className="text-[40px] md:text-[64px] text-black font-plus-jakarta-sans font-medium">
                 Varot Pavaritpong
               </p>
             </motion.div>
@@ -30,8 +30,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
             >
-              <p className="text-[24px] md:text-[64px] text-black">
-                4th year BA CS @ UBC
+              <p className="text-[24px] md:text-[64px] text-black font-plus-jakarta-sans font-medium">
+                4th year CS @ UBC
               </p>
             </motion.div>
           </div>
@@ -61,15 +61,7 @@ export default function Home() {
               About Me
             </div>
             <div className="text-base md:text-[20px] text-black font-poppins w-[90%] max-w-xl mx-auto text-justify mt-4 px-1">
-              I’m a full stack developer who believes great ideas come to life
-              through curiosity, creativity, and clean code. Currently, I’m a
-              third-year Computer Science student at UBC, where I’m honing my
-              skills in building scalable, thoughtful applications. Outside of
-              coding, I’m passionate about photography and exploring how visual
-              storytelling and technology intersect. Whether I’m developing a
-              new project, writing a guide, or capturing a moment through my
-              lens, I’m driven by a love for learning, creating, and sharing
-              ideas with the world.
+           As a fourth-year Computer Science student at the University of British Columbia, I’ve spent my time mastering the balance between clean code and creative problem-solving. Having completed internships in cloud infrastructure and AI, I specialize in building robust, scalable systems that solve complex problems. I believe the best technology is rooted in curiosity, a principle I carry into both my development projects and my work as a photographer.
             </div>
           </motion.div>
         </div>
