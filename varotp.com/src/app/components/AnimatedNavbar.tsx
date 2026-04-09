@@ -19,10 +19,10 @@ const socialLinks = [
 const AnimatedNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Dark mode disabled for now - will add new graphics later
-  const toggleDarkMode = () => {
-    // Do nothing for now
-  };
+  // // Dark mode disabled for now - will add new graphics later
+  // const toggleDarkMode = () => {
+  //   // Do nothing for now
+  // };
 
   return (
     <nav className="relative p-4 flex justify-between items-center font-plus-jakarta-sans font-medium">
