@@ -28,6 +28,10 @@ export const metadata: Metadata = {
   title: 'Varot Pavaritpong | Portfolio',
   description:
     'Full-stack developer passionate about clean code and creativity.',
+  icons: {
+    icon: '/whitefavIcon.png',
+    apple: '/whitefavIcon.png',
+  },
   keywords: [
     'Varot Pavaritpong',
     'Full Stack Developer',

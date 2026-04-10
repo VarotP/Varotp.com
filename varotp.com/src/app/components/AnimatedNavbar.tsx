@@ -31,7 +31,15 @@ const AnimatedNavbar = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-        <Link href="/" className="text-2xl font-medium text-black font-plus-jakarta-sans">VarotP</Link>
+        <Link href="/">
+          <Image
+            src="/whitefavIcon.png"
+            alt="VarotP Logo"
+            width={40}
+            height={40}
+            className="rounded-full"
+          />
+        </Link>
       </motion.div>
 
       {/* Desktop nav */}

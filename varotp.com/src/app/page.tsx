@@ -60,7 +60,7 @@ export default function Home() {
             <div className="text-3xl md:text-[48px] text-black font-poppins text-center mb-5">
               About Me
             </div>
-            <div className="text-base md:text-[20px] text-black font-poppins w-[90%] max-w-xl mx-auto text-justify mt-4 px-1">
+            <div className="text-base md:text-[20px] text-black font-poppins w-[90%] max-w-3xl mx-auto text-justify mt-4 px-1">
            As a fourth-year Computer Science student at the University of British Columbia, I’ve spent my time mastering the balance between clean code and creative problem-solving. Having completed internships in cloud infrastructure and AI, I specialize in building robust, scalable systems that solve complex problems. I believe the best technology is rooted in curiosity, a principle I carry into both my development projects and my work as a photographer.
             </div>
           </motion.div>
