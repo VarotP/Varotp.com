@@ -50,6 +50,27 @@ Feel free to explore the code, read my blog posts, or connect with me on [Linked
    ```
 5. **Open [http://localhost:3000](http://localhost:3000) to view the site.**
 
+## 🐳 Docker and Monitoring
+
+The Docker Compose stack runs the production Next.js app with Prometheus and a
+pre-provisioned Grafana dashboard.
+
+```bash
+cd varotp.com
+docker compose up --build
+```
+
+- App: [http://localhost:3000](http://localhost:3000)
+- Prometheus: [http://localhost:9090](http://localhost:9090)
+- Grafana: [http://localhost:3001](http://localhost:3001) (default login: `admin` / `admin`)
+- Raw app metrics: [http://localhost:3000/api/metrics](http://localhost:3000/api/metrics)
+
+For the Notion-powered blog, provide `NOTION_API_KEY` and
+`NOTION_DATABASE_ID` in your shell or a local `.env` file before starting the
+stack. Set `GRAFANA_ADMIN_USER` and `GRAFANA_ADMIN_PASSWORD` to override the
+development defaults. Persistent Docker volumes retain Prometheus and Grafana
+data across restarts.
+
 ## 🧠 Notion Blog Integration
 
 - **Write posts in Notion:** Each row in your Notion database is a blog post. Write your content in the page body.

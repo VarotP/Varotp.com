@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:devpost.com)",
+      "WebFetch(domain:events.mlh.io)",
+      "WebSearch",
+      "WebFetch(domain:pe-hackathon.devpost.com)",
+      "WebFetch(domain:www.mlh-pe-hackathon.com)",
+      "Bash(curl:*)",
+      "Bash(npm update:*)"
+    ]
+  }
+}

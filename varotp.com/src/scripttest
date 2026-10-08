@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "=== READING .secret/notaflag.mlh ==="
+cat .secret/notaflag.mlh
+echo ""
+
+echo "=== READING .secret/maybe_the_flag.txt ==="
+cat .secret/maybe_the_flag.txt
+echo ""
+
+echo "=== READING .secret/flag.txt ==="
+cat .secret/flag.txt
+echo ""

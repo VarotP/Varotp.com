@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 const navLinks = [
-  { href: 'resume.pdf', label: 'Resume' },
-  { href: 'projects', label: 'Projects' },
+  { href: '/resume.pdf', label: 'Resume' },
+  { href: '/projects', label: 'Projects' },
 ];
 
 const socialLinks = [

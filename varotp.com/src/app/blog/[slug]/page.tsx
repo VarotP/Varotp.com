@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -6,6 +7,17 @@ import { mdxComponents } from '../../components/mdxComponent';
 import { getNotionPost, getNotionPosts } from '@/lib/notion';
 import Footer from '../../components/Footer';
 import AnimatedNavbar from '../../components/AnimatedNavbar';
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  if (['helloworld', 'dear-future-me'].includes(slug)) {
+    return {
+      title: 'Dear Future Me (Archived) | Varot Pavaritpong',
+      robots: { index: false, follow: true },
+    };
+  }
+  return {};
+}
 
 export async function generateStaticParams() {
   // Get both MDX files and Notion posts
@@ -31,6 +43,8 @@ export async function generateStaticParams() {
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   
+  const archived = ['helloworld', 'dear-future-me'].includes(slug);
+
   // Try to get the post from Notion first
   let notionPost = null;
   try {
@@ -50,6 +64,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           >
             <AnimatedNavbar />
             <div className='max-w-4xl mx-auto px-4 md:px-20 py-7 bg-white rounded-lg shadow-lg mb-10'>
+              {archived && <p className="text-sm text-gray-600 mb-3">Archived — this letter is preserved for reference.</p>}
               <h1 className="text-2xl md:text-4xl text-black font-bold mb-2">{notionPost.title}</h1>
               <p className="text-sm text-black mb-3">{notionPost.date}</p>
               <hr className="border-t border-blue-300 mt-6" />
@@ -81,7 +96,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         >
             <AnimatedNavbar />
           <div className='max-w-4xl mx-auto px-4 md:px-8 py-4 bg-white rounded-lg shadow-lg mb-10'>
-            <h1 className="text-2xl md:text-4xl text-black font-bold mb-2">{data.title}</h1>
+            {archived && <p className="text-sm text-gray-600 mb-3">Archived — this letter is preserved for reference.</p>}
+              <h1 className="text-2xl md:text-4xl text-black font-bold mb-2">{data.title}</h1>
             <p className="text-sm text-black mb-3">{data.date}</p>
             <hr className="border-t border-blue-300 mt-6" />
 

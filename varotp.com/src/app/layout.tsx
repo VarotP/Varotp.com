@@ -25,6 +25,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://varotp.com'),
   title: 'Varot Pavaritpong | Portfolio',
   description:
     'Full-stack developer passionate about clean code and creativity.',
@@ -46,10 +47,10 @@ export const metadata: Metadata = {
     description:
       'Full-stack developer passionate about clean code and creativity.',
     siteName: 'Varot Pavaritpong Portfolio',
-    url: 'https://varotp-dev.vercel.app/',
+    url: 'https://varotp.com/',
     images: [
       {
-        url: 'https://varotp-dev.vercel.app/meta.png',
+        url: 'https://varotp.com/meta.png',
         width: 1536,
         height: 1024,
         alt: 'Portfolio Open Graph Image',
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
     title: 'Varot Pavaritpong | Portfolio',
     description:
       'Full-stack developer passionate about clean code and creativity.',
-    images: ['https://varotp-dev.vercel.app/meta.png'],
+    images: ['https://varotp.com/meta.png'],
     creator: '@NeonRedPanda',
   },
 };

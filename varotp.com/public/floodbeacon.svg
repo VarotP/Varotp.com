@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480">
+<title>FloodBeacon</title><desc>Illustrated map, bridge crossing, location beacon, and SMS report.</desc>
+<rect width="960" height="480" fill="#102b3b"/>
+<g stroke="#294958" stroke-width="2" opacity=".6"><path d="M0 80H960M0 160H960M0 240H960M0 320H960M0 400H960M120 0V480M240 0V480M360 0V480M480 0V480M600 0V480M720 0V480M840 0V480"/></g>
+<path d="M310-30C180 100 490 175 335 270S390 410 280 520" fill="none" stroke="#238fa4" stroke-width="110"/>
+<path d="M75 280L495 155" stroke="#d8e6df" stroke-width="24"/>
+<path d="M75 280L495 155" stroke="#102b3b" stroke-width="3" stroke-dasharray="14 12"/>
+<circle cx="340" cy="200" r="65" fill="none" stroke="#ffbc69" stroke-width="3" opacity=".5"/>
+<path d="M340 142a32 32 0 0 0-32 32c0 26 32 58 32 58s32-32 32-58a32 32 0 0 0-32-32" fill="#ffbc69"/><circle cx="340" cy="174" r="11" fill="#102b3b"/>
+<rect x="570" y="82" width="294" height="165" rx="18" fill="#eef6f4"/>
+<path d="M595 242v24l30-24" fill="#eef6f4"/>
+<g fill="#92acb2"><rect x="595" y="112" width="164" height="10" rx="5"/><rect x="595" y="139" width="241" height="8" rx="4"/><rect x="595" y="161" width="208" height="8" rx="4"/></g>
+<rect x="595" y="191" width="121" height="28" rx="14" fill="#cbe7db"/>
+<text x="655" y="210" text-anchor="middle" fill="#245448" font-family="Arial,sans-serif" font-size="14">SMS intake</text>
+<text x="566" y="336" fill="#fff" font-family="Arial,sans-serif" font-size="43" font-weight="700">FloodBeacon</text>
+<text x="568" y="370" fill="#b6d4dc" font-family="Arial,sans-serif" font-size="18">Satellite imagery + requests for help</text>
+</svg>

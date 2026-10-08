@@ -73,10 +73,27 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <div className="text-3xl md:text-[48px] text-black font-poppins text-center mb-10">
-              Projects
+              <Link href="/projects">Projects</Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-              <Link href="projects" className="group">
+              <Link href="/projects" className="group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="relative h-40 bg-gray-100">
+                    <Image
+                      src="/floodbeacon.svg"
+                      alt="FloodBeacon satellite and SMS disaster-response illustration"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <div className="text-[18px] text-black font-poppins font-semibold">FloodBeacon</div>
+                    <p className="text-sm text-gray-600 mt-1">Satellite imagery and SMS for disaster response</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/projects" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                   <div className="relative h-40 bg-gray-100">
                     <Image
@@ -95,7 +112,7 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
-              <Link href="projects" className="group">
+              <Link href="/projects" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                   <div className="relative h-40 bg-gray-100">
                     <Image
@@ -114,7 +131,7 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
-              <Link href="projects" className="group">
+              <Link href="/projects" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                   <div className="relative h-40 bg-gray-100">
                     <Image
@@ -133,7 +150,7 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
-              <Link href="projects" className="group">
+              <Link href="/projects" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                   <div className="relative h-40 bg-gray-100">
                     <Image
@@ -152,7 +169,7 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
-              <Link href="projects" className="group">
+              <Link href="/projects" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                   <div className="relative h-40 bg-gray-100">
                     <Image
@@ -171,7 +188,7 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
-              <Link href="projects" className="group">
+              <Link href="/projects" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                   <div className="relative h-40 bg-gray-100">
                     <Image

@@ -53,7 +53,7 @@ export default async function Blog() {
         <AnimatedNavbar />
         <div className="max-w-4xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
-          <BlogListClient posts={posts} />
+          <BlogListClient posts={posts.filter((post) => !['helloworld', 'dear-future-me'].includes(post.slug) && post.title.trim().toLowerCase() !== 'dear future me')} />
         </div>
         <Footer />
       </div>
