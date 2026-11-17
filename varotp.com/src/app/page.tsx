@@ -80,6 +80,23 @@ export default function Home() {
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                   <div className="relative h-40 bg-gray-100">
                     <Image
+                      src="/evares.jpg"
+                      alt="EVAres Mars EVA planner for NASA Space Apps 2026"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <div className="text-[18px] text-black font-poppins font-semibold">EVAres</div>
+                    <p className="text-sm text-gray-600 mt-1">Mars EVA route planning with NASA orbital data</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/projects" className="group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="relative h-40 bg-gray-100">
+                    <Image
                       src="/floodbeacon.svg"
                       alt="FloodBeacon satellite and SMS disaster-response illustration"
                       fill

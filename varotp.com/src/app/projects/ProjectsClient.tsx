@@ -9,6 +9,16 @@ import { motion } from 'framer-motion';
 // Portfolio projects
 const projects: Project[] = [
   {
+    id: 'evares',
+    title: 'EVAres',
+    description: 'A Mars EVA planner built for NASA Space Apps 2026 using NASA and USGS orbital and rover data. Explore Gale Crater in 2D and 3D, choose science stops, and compare fastest, least-effort, and safest walking routes with modeled time, energy, oxygen, and return-to-base limits.',
+    image: '/evares.jpg',
+    technologies: ['TypeScript', 'React', 'MapLibre GL', 'Vite', 'Hono', 'Cloudflare Workers'],
+    githubUrl: 'https://github.com/dekkinlarp/nasa-space-apps-2026',
+    liveUrl: 'https://evares.wtarit.me',
+    category: 'Hackathon'
+  },
+  {
     id: 'floodbeacon',
     title: 'FloodBeacon',
     description: 'A disaster-response dashboard combining before-and-after satellite imagery with SMS requests for help. Multimodal AI flags visible bridge damage, while Gemini structures Twilio messages and asks for missing location details. Original messages and audit history remain available, with responders controlling verification, priority, and response status.',

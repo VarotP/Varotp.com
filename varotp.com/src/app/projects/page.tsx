@@ -3,7 +3,7 @@ import ProjectsClient from './ProjectsClient';
 
 export const metadata: Metadata = {
   title: 'Projects | Varot Pavaritpong',
-  description: 'Explore Varot Pavaritpong’s software projects: FloodBeacon disaster response, PipeLie, PhishPatrol, machine learning, and web applications.',
+  description: 'Explore Varot Pavaritpong’s software projects: EVAres Mars EVA planner, FloodBeacon disaster response, PipeLie, PhishPatrol, and more.',
   alternates: { canonical: '/projects' },
   openGraph: {
     title: 'Projects | Varot Pavaritpong',
